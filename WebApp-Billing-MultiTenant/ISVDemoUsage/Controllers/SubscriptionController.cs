@@ -12,7 +12,7 @@ namespace ISVDemoUsage.Controllers
     {
         private DataAccess db = new DataAccess();
 
-        public ActionResult Connect([Bind(Include = "Id, OrganizationId")] Subscription subscription, string servicePrincipalObjectId)
+        public ActionResult     Connect([Bind(Include = "Id, OrganizationId")] Subscription subscription, string servicePrincipalObjectId)
         {
             if (ModelState.IsValid)
             {

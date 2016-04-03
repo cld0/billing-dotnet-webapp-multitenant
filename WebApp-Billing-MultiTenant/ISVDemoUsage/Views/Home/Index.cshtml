@@ -1,11 +1,10 @@
 ﻿@model ISVDemoUsage.Models.HomeIndexViewModel
 @{
-    ViewBag.Title = "ISV Demo for Usage API";
+    ViewBag.Title = "Smart aaS from CloudRight";
 }
 
 <div class="jumbotron">
-    <h1>ISV Demo for Usage</h1>
-    <p class="lead">If you have any questions, please email AzureITFM@microsoft.com</p>
+    <h1>Smart aaS from CloudRight</h1>
 </div>
 
 <div class="row">
@@ -49,7 +48,7 @@
                     <h4>Azure Subscription</h4>
                 </td>
                 <td>
-                    <h4>Monitored by ISV?</h4>
+                    <h4>Subscription status</h4>
                 </td>
             </tr>
             @foreach (KeyValuePair<string, ISVDemoUsage.Models.Subscription> entry in Model.UserSubscriptions)

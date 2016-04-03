@@ -27,10 +27,10 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net;
 using System.Web.Mvc;
+using System.Net;
 
 namespace ISVDemoUsage {
-    public partial class Startup
-    {
+    public partial class Startup{
         private DataAccess db = new DataAccess();
         public void ConfigureAuth(IAppBuilder app)
         {
@@ -95,7 +95,7 @@ namespace ISVDemoUsage {
                             cache.Clear();
                             
                             
-                            AuthenticationContext authContext = new AuthenticationContext(string.Format("https://login.microsoftonline.com/{0}", tenantID),
+                            AuthenticationContext authContext = new AuthenticationContext(string.Format("https://login.microsoftonline.com/common", tenantID),
                                 new ADALTokenCache(signedInUserUniqueName));
 
                             var items = authContext.TokenCache.ReadItems().ToList();
